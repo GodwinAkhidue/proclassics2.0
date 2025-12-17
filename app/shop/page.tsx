@@ -62,7 +62,7 @@ export default function ShopPage() {
 
     setLoading(true);
 
-    const res = await api.get(`/api/product/get-some/${page}`);
+    const res = await api.get(`/api/product/get-all`);
     const data = res.data.products;
     console.log(res);
 

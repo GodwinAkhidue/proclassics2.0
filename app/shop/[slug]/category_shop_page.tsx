@@ -67,7 +67,6 @@ export default function CategoryShopPage({ category }: { category: any }) {
       slug: category,
     });
     const data = res.data.products;
-    console.log(res);
 
     if (data.length === 0) {
       setHasMore(false);

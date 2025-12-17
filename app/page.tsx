@@ -175,6 +175,7 @@ export default function Home() {
 
       <Link
         href={`https://wa.me/${phonenumber}`}
+        target="_blank"
         className={`cta ${raleway.className} fixed bottom-14 right-8 text-white font-bold bg-[#2B9D84] mt-[100px] uppercase flex items-center justify-center text-lg p-5 gap-x-3 rounded-full`}
       >
         <span className="w-[36px]">
@@ -236,18 +237,20 @@ export default function Home() {
         <div className="collection-grid grid grid-cols-2 md:grid-cols-4 gap-4">
           {colCards.map((card, index) => (
             <Link
-              href={`/shop/${card?.slug}`}
+              href={`/shop/${encodeURIComponent(card?.slug)}`}
               key={index}
               className="collection-card flex flex-col justify-start gap-y-3"
             >
               <div className="card-img overflow-hidden rounded">
-                <Image
-                  className="rounded mt-8 w-full"
-                  width={158}
-                  height={198}
-                  alt="collection card pic"
-                  src={card?.image?.url}
-                />
+                {card?.image?.url && (
+                  <Image
+                    className="rounded mt-8 w-full"
+                    width={158}
+                    height={198}
+                    alt="collection card pic"
+                    src={card?.image?.url}
+                  />
+                )}
               </div>
               <div
                 className={` ${playfairDisplay.className} title font-semibold text-base`}

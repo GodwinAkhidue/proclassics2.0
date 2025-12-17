@@ -168,7 +168,7 @@ export default function Jewelry_Testing() {
         </section>
         <Testimonials />
       </div>
-      <Newsletter />
+      {/* <Newsletter /> */}
     </div>
   );
 }

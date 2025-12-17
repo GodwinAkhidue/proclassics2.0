@@ -1,41 +1,34 @@
-"use client"
+"use client";
 import Video_Item from "./video_item";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function Video_Scroll() {
+  const videos = [
+    "https://www.youtube.com/embed/m2mcP58caKI?si=6u1ml--LPqQl6s0S",
+    "https://www.youtube.com/embed/xp64JL_zd5o?si=6UvRmlMAEpnLNnka",
+    "https://www.youtube.com/embed/l7qkKouzyMI?si=y_lrpI5YATfkiOZu",
+    "https://www.youtube.com/embed/7fZIqfemYtw?si=HqWRviQAADZxo-hn",
+  ];
 
-    const videos = [
-        "https://www.youtube.com/embed/mh_E048DhWg?si=WUCWzWfL-fehcUK1",
-        "https://www.youtube.com/embed/mh_E048DhWg?si=WUCWzWfL-fehcUK1",
-        "https://www.youtube.com/embed/mh_E048DhWg?si=WUCWzWfL-fehcUK1",
-        "https://www.youtube.com/embed/mh_E048DhWg?si=WUCWzWfL-fehcUK1",
-        "https://www.youtube.com/embed/rWcWu92sr-s?si=pn5OrfuQL-V48r2s",
-        "https://www.youtube.com/embed/rWcWu92sr-s?si=pn5OrfuQL-V48r2s",
-        "https://www.youtube.com/embed/rWcWu92sr-s?si=pn5OrfuQL-V48r2s",
-        "https://www.youtube.com/embed/rWcWu92sr-s?si=pn5OrfuQL-V48r2s",
-    ];
-
-    return (
-        <div className="mt-10 lg:mt-28 mb-10 w-full relative px-4">
-            <Swiper
-                modules={[Navigation, Pagination]}
-                navigation
-                pagination={{ clickable: true }}
-                spaceBetween={16}
-                slidesPerView={"auto"}
-            >
-                {
-                    videos.map((i, index) => (
-                        <SwiperSlide key={index} style={{ width: "180px" }}>
-                            <Video_Item url={i} />
-                        </SwiperSlide>
-                    ))
-                }
-            </Swiper>
-        </div>
-    );
+  return (
+    <div className="mt-10 lg:mt-28 mb-10 w-full relative px-4">
+      <Swiper
+        modules={[Navigation, Pagination]}
+        navigation
+        pagination={{ clickable: true }}
+        spaceBetween={16}
+        slidesPerView={"auto"}
+      >
+        {videos.map((i, index) => (
+          <SwiperSlide key={index} style={{ width: "180px" }}>
+            <Video_Item url={i} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
 }

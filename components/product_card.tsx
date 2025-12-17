@@ -47,12 +47,12 @@ export const poppins = Poppins({
 export default function Product_Card({ product }: { product: any }) {
   return (
     <Link
-      href={`/product/${product?.slug}`}
+      href={`/product/${encodeURIComponent(product?.slug)}`}
       className="collection-card flex flex-col justify-start"
     >
       <div className="w-full max-w-[310px] h-[60vw] max-h-[400px] rounded-[7px] overflow-hidden relative">
         <Image
-          className="object-cover"
+          className="object-contain"
           fill
           alt="product"
           src={product?.images[0]?.url}

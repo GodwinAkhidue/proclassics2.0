@@ -1,3 +1,4 @@
+"use client";
 import Images from "./images";
 import Other_Information from "./otherInformation";
 import Image from "next/image";
@@ -12,6 +13,10 @@ import {
   Prompt,
   Plus_Jakarta_Sans,
 } from "next/font/google";
+import Link from "next/link";
+import { phonenumber } from "@/lib/constants";
+import { useEffect, useState } from "react";
+import api from "@/utils/api";
 
 export const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -47,6 +52,21 @@ export const poppins = Poppins({
 });
 
 export default function ProductPage({ product }: { product: any }) {
+  const [products, setProducts] = useState<any[]>([]);
+
+  const fetchProducts = async () => {
+    const res = await api.post(`/api/product/get-some-from-one-category`, {
+      slug: product?.slug,
+      category: product?.category,
+    });
+    const data = res.data.products;
+    setProducts(data);
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   return (
     <main className="flex flex-col items-center justify-center pb-[40px] lg:pb-[80px]">
       <section
@@ -66,12 +86,17 @@ export default function ProductPage({ product }: { product: any }) {
           <div className={`mt-4 ${nunito} font-bold text-[#433740]`}>
             {product?.description}
           </div>
-          <Other_Information />
-          <button
+          <Other_Information product={product} />
+          <Link
+            target="_blank"
+            href={`https://wa.me/${phonenumber}?text=${encodeURIComponent(
+              `I would love to make enquiry about the ${product?.name}. 
+              https://proclassics.co/product/${product?.slug}`
+            )}`}
             className={`mt-10 lg:mt-20 w-full flex items-center justify-center ${inter.className} bg-[#2B9D84] rounded-full text-white font-semibold py-4 text-[15px]`}
           >
             TALK NOW ON WHATSAPP
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -104,16 +129,11 @@ export default function ProductPage({ product }: { product: any }) {
       </section>
 
       <section className="px-4 lg:px-[60px] lg:max-w-[1400px]">
-        <div
-          className={`${lora.className} font-medium text-[27px] lg:text-[36px] mt-[34px]`}
-        >
-          Usually Bought With
-        </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[16px] lg:gap-[24px] mt-6 lg:mt-8">
-          {/* <Product_Card />
-                    <Product_Card />
-                    <Product_Card />
-                    <Product_Card /> */}
+          {products?.length > 0 &&
+            products?.map((item: any, index: any) => (
+              <Product_Card key={index} product={item} />
+            ))}
         </div>
       </section>
     </main>
