@@ -55,7 +55,7 @@ export default function ProductPage({ product }: { product: any }) {
   const [products, setProducts] = useState<any[]>([]);
 
   const fetchProducts = async () => {
-    const res = await api.post(`/api/product/get-some-from-one-category`, {
+    const res = await api.post(`/api/product/get-some-from-category`, {
       slug: product?.slug,
       category: product?.category,
     });
@@ -64,8 +64,10 @@ export default function ProductPage({ product }: { product: any }) {
   };
 
   useEffect(() => {
-    fetchProducts();
-  }, []);
+    if (product) {
+      fetchProducts();
+    }
+  }, [product]);
 
   return (
     <main className="flex flex-col items-center justify-center pb-[40px] lg:pb-[80px]">
