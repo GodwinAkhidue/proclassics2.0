@@ -21,7 +21,7 @@ export default function Custom_Jewelry() {
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <div className="w-full max-w-[1200px]">
-        <section className="w-full relative h-[60vw] max-h-[770px]">
+        <section className="w-full relative h-[60vh] lg:h-screen max-h-[600px]">
           <video
             className="w-full h-full object-cover"
             width="320"
@@ -51,7 +51,7 @@ export default function Custom_Jewelry() {
             </Link>
           </div>
         </section>
-        <section className="mt-6 lg:mt-36 px-4">
+        <section className="mt-16 lg:mt-24 px-4">
           <div
             className={`${inter.className} font-bold text-[24px] text-center`}
           >
@@ -61,8 +61,8 @@ export default function Custom_Jewelry() {
             A lattice of diamonds creates a shimmering, woven pattern in this
             exquisite platinum necklace
           </div>
-          <div className="mt-4 lg:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-5">
-            <div className="w-full h-[calc(100vw-32px)] max-h-[570px] relative lg:col-span-2">
+          <div className="mt-8 lg:mt-12 grid grid-cols-2 gap-5">
+            <div className="w-full h-[calc(50vw-16px)] max-h-[570px] relative lg:col-span-2">
               <Image
                 src={"/anotherbanner.jpg"}
                 alt="custom jewelry"
@@ -70,7 +70,7 @@ export default function Custom_Jewelry() {
                 className="object-cover"
               />
             </div>
-            <div className="w-full h-[calc(100vw-32px)] max-h-[570px] relative">
+            <div className="w-full h-[calc(50vw-16px)] max-h-[570px] relative">
               <Image
                 src={"/custom1.jpg"}
                 alt="custom jewelry"
@@ -78,7 +78,7 @@ export default function Custom_Jewelry() {
                 className="object-cover"
               />
             </div>
-            <div className="w-full h-[calc(100vw-32px)] max-h-[570px] relative">
+            <div className="w-full h-[calc(50vw-16px)] max-h-[570px] relative">
               <Image
                 src={"/custom2.jpg"}
                 alt="custom jewelry"
@@ -86,7 +86,7 @@ export default function Custom_Jewelry() {
                 className="object-cover"
               />
             </div>
-            <div className="w-full h-[calc(100vw-32px)] max-h-[570px] relative">
+            <div className="w-full h-[calc(50vw-16px)] max-h-[570px] relative">
               <Image
                 src={"/custom3.jpg"}
                 alt="custom jewelry"
@@ -94,7 +94,7 @@ export default function Custom_Jewelry() {
                 className="object-cover"
               />
             </div>
-            <div className="w-full h-[calc(100vw-32px)] max-h-[570px] relative">
+            <div className="w-full h-[calc(50vw-16px)] max-h-[570px] relative">
               <Image
                 src={"/custom4.jpg"}
                 alt="custom jewelry"
@@ -108,7 +108,7 @@ export default function Custom_Jewelry() {
           <Form />
         </section>
         <section
-          className={`${raleway.className} mt-16 lg:mt-20 text-[20px] text-[#475467] px-4`}
+          className={`${raleway.className} mt-16 lg:mt-20 lg:text-xl text-[#475467] px-4`}
         >
           Looking for the best custom jewelry in Nigeria? At Pro Classics, we
           design and deliver luxury custom pieces straight from Dubai — crafted

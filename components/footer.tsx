@@ -92,77 +92,64 @@ export default function Footer() {
         </div>
         <div className="quick-links mt-24 md:mt-0 md:max-w-sm">
           <h3
-            className={`${playfairDisplay.className} font-semibold text-white text-[24px]`}
+            className={`${playfairDisplay.className} font-semibold text-white text-lg`}
           >
             Quick Links
           </h3>
           <ul className="links mt-5 text-[#D1D5DB] flex flex-col gap-4">
-            <Link
-              href={"/shop"}
-              className={`${raleway.className} text-lg font-medium`}
-            >
+            <Link href={"/shop"} className={`${raleway.className} font-medium`}>
               Shop
             </Link>
             <Link
               href={"/custom-jewelry"}
-              className={`${raleway.className} text-lg font-medium`}
+              className={`${raleway.className} font-medium`}
             >
               Custom Orders
             </Link>
-            <Link
-              href={"/blog"}
-              className={`${raleway.className} text-lg font-medium`}
-            >
+            <Link href={"/blog"} className={`${raleway.className} font-medium`}>
               Blog
             </Link>
-            <Link
-              href={"/faq"}
-              className={`${raleway.className} text-lg font-medium`}
-            >
+            <Link href={"/faq"} className={`${raleway.className} font-medium`}>
               FAQ
             </Link>
           </ul>
         </div>
         <div className="contact mt-24 md:mt-0 md:max-w-sm md:ml-4">
-          <h3
-            className={`${playfairDisplay.className} font-semibold text-white text-[24px]`}
-          >
+          <h3 className={`${playfairDisplay.className} text-white text-lg`}>
             Contact
           </h3>
           <ul className="details mt-5 text-[#D1D5DB] flex flex-col gap-4">
             <li className={`${raleway.className} flex gap-3 items-center`}>
               <Image
-                className="w-[32px]"
+                className="w-[24px]"
                 width={100}
                 height={100}
                 alt="picsz"
                 src={"/location.svg"}
               />
-              <span className="text-lg font-medium">
-                Dubai - Walk in by Appointment Only
-              </span>
+              <span className="">Dubai - Walk in by Appointment Only</span>
             </li>
             <li className={`${raleway.className} flex gap-3 items-center`}>
               <Image
-                className="w-[32px]"
+                className="w-[24px]"
                 width={100}
                 height={100}
                 alt="picsz"
                 src={"/location.svg"}
               />
-              <span className="text-lg font-medium">
+              <span className="">
                 Silverado mall, 23b Admiralty, lekki, Lagos, Nigeria
               </span>
             </li>
             <li className={`${raleway.className} flex gap-3 items-center`}>
               <Image
-                className="w-[32px]"
+                className="w-[24px]"
                 width={100}
                 height={100}
                 alt="picsz"
                 src={"/location.svg"}
               />
-              <span className="text-lg font-medium">
+              <span className="">
                 I2 Motors Building, Spintex Road, Accra, Ghana
               </span>
             </li>
@@ -171,26 +158,26 @@ export default function Footer() {
               className={`${raleway.className} flex gap-3 items-center`}
             >
               <Image
-                className="w-[32px]"
+                className="w-[24px]"
                 width={100}
                 height={100}
                 alt="picsz"
                 src={"/phone.svg"}
               />
-              <span className="text-lg font-medium">+971 52 465 0058</span>
+              <span className="">+971 52 465 0058</span>
             </Link>
             <Link
               href={`mailto:info@proclassics.com`}
               className={`${raleway.className} flex gap-3 items-center`}
             >
               <Image
-                className="w-[32px]"
+                className="w-[24px]"
                 width={100}
                 height={100}
                 alt="picsz"
                 src={"/messageicon.svg"}
               />
-              <span className="text-lg font-medium">info@proclassic.com</span>
+              <span className="">info@proclassic.com</span>
             </Link>
           </ul>
         </div>

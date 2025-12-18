@@ -176,9 +176,9 @@ export default function Home() {
       <Link
         href={`https://wa.me/${phonenumber}`}
         target="_blank"
-        className={`cta ${raleway.className} fixed bottom-14 right-8 text-white font-bold bg-[#2B9D84] mt-[100px] uppercase flex items-center justify-center text-lg p-5 gap-x-3 rounded-full`}
+        className={`cta ${raleway.className} fixed bottom-8 right-8 bg-[#2B9D84] flex items-center justify-center p-4 rounded-full`}
       >
-        <span className="w-[36px]">
+        <span className="w-[32px]">
           <Image
             className="object-cover"
             width={100}
@@ -196,25 +196,32 @@ export default function Home() {
         >
           OUR ICONIC CUSTOM COLLECTION
         </h2>
-        <div className="collections flex flex-col md:flex-row items-center justify-start gap-[11px] overflow-x-auto md:gap-x-[20px] mt-10 hide-scrollbar">
+        <div className="collections grid grid-cols-2 lg:grid-cols-4 items-center justify-start gap-3 mt-10">
           <Image
-            className="w-[80%] md:w-[47%] rounded"
-            width={160}
-            height={334}
+            className="rounded"
+            width={999}
+            height={999}
             alt="collection pic"
             src={"/collection1.png"}
           />
           <Image
-            className="w-[100%] md:w-[47%] rounded"
-            width={240}
-            height={350}
+            className="rounded"
+            width={999}
+            height={999}
             alt="collection pic"
             src={"/collection2.png"}
           />
           <Image
-            className="w-[80%] md:w-[47%] rounded"
-            width={150}
-            height={320}
+            className="rounded"
+            width={999}
+            height={999}
+            alt="collection pic"
+            src={"/collection3.png"}
+          />
+          <Image
+            className="rounded"
+            width={999}
+            height={999}
             alt="collection pic"
             src={"/collection3.png"}
           />
