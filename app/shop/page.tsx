@@ -108,7 +108,7 @@ export default function ShopPage() {
           BLACK FRIDAY SALE | UP TO 40% OFF
         </div>
         <div className={`lg:text-[24px] font-light ${inter.className}`}>
-          Lorem ipsum dolor sit amet consectetur
+          Certified Quality. Black Friday Savings.
         </div>
       </div>
       <section className="text-black lg:flex lg:gap-[30px] lg:px-[60px] mt-[60px] lg:mt-[80px] lg:w-full lg:max-w-[1400px]">

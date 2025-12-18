@@ -76,8 +76,8 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className="features my-12 flex flex-col md:flex-row md:max-w-[85%] md:mx-auto gap-3 items-center justify-center">
-        <div className="feature-card flex flex-col items-center justify-center gap-3 w-[53%] bg-[#fafafa] p-12 py-16 rounded text-center">
+      <section className="my-12 grid grid-cols-2 lg:grid-cols-4 gap-3 px-3 max-w-[1200px] mx-auto">
+        <div className="feature-card flex flex-col items-center justify-center gap-3 bg-[#fafafa] p-12 py-16 rounded text-center">
           <div className="svg1 w-[25px] ">
             <Image
               className="w-full h-full"
@@ -93,7 +93,7 @@ export default function Home() {
             Very Fast Shipping
           </div>
         </div>
-        <div className="feature-card flex flex-col items-center justify-center gap-3 w-[53%] bg-[#fafafa] p-12 py-16 rounded text-center">
+        <div className="feature-card flex flex-col items-center justify-center gap-3 bg-[#fafafa] p-12 py-16 rounded text-center">
           <div className="svg1 w-[25px] ">
             <Image
               className="w-full h-full"
@@ -109,7 +109,7 @@ export default function Home() {
             Secure Payments
           </div>
         </div>
-        <div className="feature-card flex flex-col items-center justify-center gap-3 w-[53%] bg-[#fafafa] p-12 py-16 rounded text-center">
+        <div className="feature-card flex flex-col items-center justify-center gap-3 bg-[#fafafa] p-12 py-16 rounded text-center">
           <div className="svg1 w-[25px] ">
             <Image
               className="w-full h-full"
@@ -125,7 +125,7 @@ export default function Home() {
             Hassle-Free Returns
           </div>
         </div>
-        <div className="feature-card flex flex-col items-center justify-center gap-3 w-[53%] bg-[#fafafa] p-12 py-16 rounded text-center">
+        <div className="feature-card flex flex-col items-center justify-center gap-3 bg-[#fafafa] p-12 py-16 rounded text-center">
           <div className="svg1 w-[25px] ">
             <Image
               className="w-full h-full"
@@ -192,27 +192,27 @@ export default function Home() {
 
       <section className="collection px-4 py-12 mx-auto flex flex-col items-center w-full ">
         <h2
-          className={`collection-heading ${raleway.className} text-xl font-medium text-center`}
+          className={`collection-heading ${plusJakartaSans.className} text-xl font-bold text-center`}
         >
           OUR ICONIC CUSTOM COLLECTION
         </h2>
-        <div className="collections flex items-center justify-start gap-x-[11px] overflow-x-auto md:gap-x-[20px] mt-10 hide-scrollbar">
+        <div className="collections flex flex-col md:flex-row items-center justify-start gap-[11px] overflow-x-auto md:gap-x-[20px] mt-10 hide-scrollbar">
           <Image
-            className="w-[47%] rounded"
+            className="w-[80%] md:w-[47%] rounded"
             width={160}
             height={334}
             alt="collection pic"
             src={"/collection1.png"}
           />
           <Image
-            className="w-[60%] rounded"
+            className="w-[100%] md:w-[47%] rounded"
             width={240}
             height={350}
             alt="collection pic"
             src={"/collection2.png"}
           />
           <Image
-            className="w-[43%] rounded"
+            className="w-[80%] md:w-[47%] rounded"
             width={150}
             height={320}
             alt="collection pic"
@@ -229,7 +229,7 @@ export default function Home() {
 
       <section className="px-4 py-12 w-full mx-auto flex flex-col items-center">
         <h2
-          className={`collection-heading ${raleway.className} font-medium text-xl text-center`}
+          className={`collection-heading ${plusJakartaSans.className} font-bold text-xl text-center`}
         >
           OBSESSIVE ATTENTION.
           <br className="md:hidden" /> MAKING YOU NEW
@@ -264,7 +264,7 @@ export default function Home() {
 
       <section className="custom-pieces px-4 py-12 w-full mx-auto flex flex-col items-center">
         <h2
-          className={`cp-heading ${raleway.className} font-medium text-xl text-center`}
+          className={`cp-heading  ${plusJakartaSans.className} font-bold text-xl text-center`}
         >
           CUSTOM PIECES
         </h2>
@@ -319,9 +319,9 @@ export default function Home() {
       <section className="jewelry-testing px-4 py-12 w-full mx-auto flex flex-col md:flex-row md:justify-between md:items-center md:gap-x-8 md:max-w-[85%]">
         <div className="group-text md:flex md:flex-col md:gap-y-6 md:items-start md:justify-center md:order-2 md:max-w-sm lg:max-w-md">
           <h2
-            className={`cp-heading ${playfairDisplay.className} font-medium text-xl text-center uppercase`}
+            className={`cp-heading  ${plusJakartaSans.className} font-bold text-xl text-center`}
           >
-            Jewelry Testing
+            JEWELRY TESTING
           </h2>
           <p
             className={`${raleway.className} font-light text-xl subtext hidden md:block `}
@@ -353,19 +353,19 @@ export default function Home() {
         </div>
 
         <button
-          className={`shop md:hidden ${raleway.className} w-[30%] mx-auto font-medium text-base px-5 py-3 bg-[#121212] text-white mt-10 rounded`}
+          className={`shop md:hidden ${raleway.className} mx-auto font-medium text-base px-5 py-3 bg-[#121212] text-white mt-10 rounded`}
         >
           Contact Us
         </button>
       </section>
       <section className="custom-pieces px-4 py-12 w-full mx-auto flex flex-col items-center">
         <h2
-          className={`cp-heading ${raleway.className} font-medium text-xl text-center`}
+          className={`cp-heading ${raleway.className} font-bold text-xl text-center`}
         >
           TIMELESS PIECES
         </h2>
         <div className="scroll-container overflow-x-auto w-full mt-10 px-4 mx-auto">
-          <div className="cp flex justify-center items-center gap-2 w-full h-[30vh] md:h-[60vh] md:max-w-[787.09px] mx-auto">
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-2 w-full mx-auto lg:h-[600px]">
             <div className="vid-container rounded-lg overflow-hidden w-full h-full">
               <Image
                 className="w-full h-full object-cover"
