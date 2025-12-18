@@ -17,11 +17,11 @@ import { phonenumber } from "@/lib/constants";
 
 export const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  weight: "600", // or your desired weight
+  weight: ["400", "500", "600", "700", "800"], // or your desired weight
 });
 export const raleway = Raleway({
   subsets: ["latin"],
-  weight: ["300", "500", "700", "900"], // or your desired weight
+  weight: ["300", "400", "500", "600", "700", "900"], // or your desired weight
 });
 export const prompt = Prompt({
   subsets: ["latin"],
@@ -29,11 +29,11 @@ export const prompt = Prompt({
 });
 export const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["200", "400", "700", "800"], // or your desired weight
+  weight: ["200", "400", "500", "600", "700", "800"], // or your desired weight
 });
 export const inter = Inter({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "700", "800"], // or your desired weight
+  weight: ["200", "300", "400", "500", "600", "700", "800"], // or your desired weight
 });
 export const lora = Lora({
   subsets: ["latin"],
@@ -62,7 +62,7 @@ export default function Home() {
   }, []);
   return (
     <div className="relative">
-      <section className="hero hero-bg w-full h-[50vh] text-white text-center flex flex-col justify-center items-center gap-5">
+      <section className="hero hero-bg w-full h-[60vh] lg:h-[80vh] text-white text-center flex flex-col justify-center items-center gap-5">
         <h1
           className={`heading ${playfairDisplay.className} font-semibold text-2xl`}
         >
@@ -190,9 +190,9 @@ export default function Home() {
         {/* Chat Now */}
       </Link>
 
-      <section className="collection px-4 py-12 mx-auto flex flex-col items-center w-full ">
+      <section className="collection px-4 mt-16 lg:mt-24 mx-auto flex flex-col items-center w-full ">
         <h2
-          className={`collection-heading ${plusJakartaSans.className} text-xl font-bold text-center`}
+          className={`collection-heading ${plusJakartaSans.className} text-xl font-medium text-center w-[250px] lg:w-[400px]`}
         >
           OUR ICONIC CUSTOM COLLECTION
         </h2>
@@ -227,9 +227,9 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className="px-4 py-12 w-full mx-auto flex flex-col items-center">
+      <section className="px-4 mt-16 lg:mt-24 w-full mx-auto flex flex-col items-center">
         <h2
-          className={`collection-heading ${plusJakartaSans.className} font-bold text-xl text-center`}
+          className={`collection-heading ${plusJakartaSans.className} font-medium text-xl text-center`}
         >
           OBSESSIVE ATTENTION.
           <br className="md:hidden" /> MAKING YOU NEW
@@ -242,18 +242,16 @@ export default function Home() {
               className="collection-card flex flex-col justify-start gap-y-3"
             >
               <div className="card-img overflow-hidden rounded">
-                {card?.image?.url && (
-                  <Image
-                    className="rounded mt-8 w-full"
-                    width={158}
-                    height={198}
-                    alt="collection card pic"
-                    src={card?.image?.url}
-                  />
-                )}
+                <Image
+                  className="rounded mt-8 w-full"
+                  width={158}
+                  height={198}
+                  alt="collection card pic"
+                  src={card?.image?.url}
+                />
               </div>
               <div
-                className={` ${playfairDisplay.className} title font-semibold text-base`}
+                className={` ${playfairDisplay.className} title font-medium text-base`}
               >
                 {card?.name.toUpperCase()}
               </div>
@@ -262,9 +260,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="custom-pieces px-4 py-12 w-full mx-auto flex flex-col items-center">
+      <section className="custom-pieces px-4 mt-16 lg:mt-24 w-full mx-auto flex flex-col items-center">
         <h2
-          className={`cp-heading  ${plusJakartaSans.className} font-bold text-xl text-center`}
+          className={`cp-heading  ${plusJakartaSans.className} font-medium text-xl text-center`}
         >
           CUSTOM PIECES
         </h2>
@@ -316,10 +314,10 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className="jewelry-testing px-4 py-12 w-full mx-auto flex flex-col md:flex-row md:justify-between md:items-center md:gap-x-8 md:max-w-[85%]">
+      <section className="jewelry-testing px-4 mt-16 lg:mt-24 w-full mx-auto flex flex-col md:flex-row md:justify-between md:items-center md:gap-x-8 md:max-w-[85%]">
         <div className="group-text md:flex md:flex-col md:gap-y-6 md:items-start md:justify-center md:order-2 md:max-w-sm lg:max-w-md">
           <h2
-            className={`cp-heading  ${plusJakartaSans.className} font-bold text-xl text-center`}
+            className={`cp-heading  ${plusJakartaSans.className} font-medium text-xl text-center`}
           >
             JEWELRY TESTING
           </h2>
@@ -358,9 +356,9 @@ export default function Home() {
           Contact Us
         </button>
       </section>
-      <section className="custom-pieces px-4 py-12 w-full mx-auto flex flex-col items-center">
+      <section className="custom-pieces px-4 mt-16 lg:mt-24 w-full mx-auto flex flex-col items-center">
         <h2
-          className={`cp-heading ${raleway.className} font-bold text-xl text-center`}
+          className={`cp-heading ${raleway.className} font-medium text-xl text-center`}
         >
           TIMELESS PIECES
         </h2>
@@ -397,7 +395,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="h-[48vh] w-full">
+      <section className="h-[48vh] lg:h-[90vh] w-full mt-16 lg:mt-24">
         <video
           className="w-full h-full object-cover"
           width="320"
@@ -410,8 +408,8 @@ export default function Home() {
         </video>
       </section>
 
-      <section className="mission py-16 mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-[34px] justify-items-center">
-        <div className="mission-card mission-card-shadow rounded-[17px] py-8 px-5 max-w-[300px] flex flex-col justify-center gap-y-6 text-center border-[5px] border-[#fafafa]">
+      <section className="mission my-16 lg:my-24 mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-[34px] lg:gap-6 max-w-[1400px] justify-items-center">
+        <div className="mission-card mission-card-shadow rounded-[17px] py-8 px-5 max-w-[300px] lg:max-w-[450px] flex flex-col justify-center gap-y-6 text-center border-[5px] border-[#fafafa]">
           <div
             className={`title flex justify-center gap-x-3 items-center  ${raleway.className} font-medium text-base `}
           >
@@ -434,7 +432,7 @@ export default function Home() {
             are nothing short of exquisite. Through impeccable craftsmanship,
           </div>
         </div>
-        <div className="mission-card mission-card-shadow rounded-[17px] py-8 px-5 max-w-[300px] flex flex-col justify-center gap-y-6 text-center border-[5px] border-[#fafafa]">
+        <div className="mission-card mission-card-shadow rounded-[17px] py-8 px-5 max-w-[300px] lg:max-w-[450px] flex flex-col justify-center gap-y-6 text-center border-[5px] border-[#fafafa]">
           <div
             className={`title flex justify-center gap-x-3 items-center  ${raleway.className} font-medium text-base `}
           >
@@ -460,7 +458,7 @@ export default function Home() {
             sophistication, success, and unapologetic elegance.
           </div>
         </div>
-        <div className="mission-card mission-card-shadow rounded-[17px] py-8 px-5 max-w-[300px] flex flex-col justify-center gap-y-6 text-center border-[5px] border-[#fafafa]">
+        <div className="mission-card mission-card-shadow rounded-[17px] py-8 px-5 max-w-[300px] lg:max-w-[450px] flex flex-col justify-center gap-y-6 text-center border-[5px] border-[#fafafa]">
           <div
             className={`title flex justify-center gap-x-3 items-center  ${raleway.className} font-medium text-base `}
           >

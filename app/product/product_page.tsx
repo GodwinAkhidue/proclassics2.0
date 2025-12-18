@@ -85,7 +85,9 @@ export default function ProductPage({ product }: { product: any }) {
           <div className={`${lora.className} font-medium text-[28px]`}>
             {product?.name}
           </div>
-          <div className={`mt-4 ${nunito} font-bold text-[#433740]`}>
+          <div
+            className={`mt-4 ${nunito.className}text-[#433740] whitespace-pre-line`}
+          >
             {product?.description}
           </div>
           <Other_Information product={product} />
