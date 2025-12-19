@@ -50,7 +50,7 @@ export default function Product_Detail({ otherInfo }: { otherInfo: any }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div>
+    <div className="text-[14px] lg:text-base">
       <button
         className="w-full flex items-center justify-between py-7"
         onClick={() => setOpen(!open)}
@@ -58,7 +58,7 @@ export default function Product_Detail({ otherInfo }: { otherInfo: any }) {
         <div
           className={`${plusJakartaSans.className} ${
             open ? "font-semibold" : "font-medium"
-          } text-[14px]`}
+          }`}
         >
           {otherInfo?.title}
         </div>
@@ -67,7 +67,7 @@ export default function Product_Detail({ otherInfo }: { otherInfo: any }) {
       <div
         className={`w-full h-[1px] bg-black ${open ? "hidden" : "block"}`}
       ></div>
-      <div className={`${open ? "block" : "hidden"}`}>
+      <div className={`${open ? "block" : "hidden"} whitespace-pre-line`}>
         <div>{otherInfo?.description}</div>
       </div>
     </div>

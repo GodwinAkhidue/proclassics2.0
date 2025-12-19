@@ -87,34 +87,37 @@ export default function ProductPage({ product }: { product: any }) {
       <section className="mt-[40px] lg:mt-[80px] flex flex-col lg:flex-row lg:items-start lg:w-full items-center justify-center px-4 lg:px-[60px] gap-[40px] lg:gap-[70px] max-w-[1400px]">
         <Images images={product?.images} />
         <div className="flex flex-col items-center justify-center lg:items-start">
-          <div className={`${lora.className} font-medium text-[28px] mb-3`}>
+          <div
+            className={`${lora.className} font-medium text-[20px] lg:text-2xl mb-3`}
+          >
             {product?.name}
           </div>
+
           <div
-            className={`${nunito.className} font-bold text-[26px] w-full border-y py-3 px-1`}
+            className={`${nunito.className} font-bold text-[20px] lg:text-2xl w-full border-y py-3 px-1`}
           >
             {product?.price && formatPrice.format(product.price)}
           </div>
-          <div
-            className={`mt-3 ${nunito.className}text-[#433740] whitespace-pre-line`}
-          >
-            {product?.description}
-          </div>
-          <Other_Information product={product} />
           <Link
             target="_blank"
             href={`https://wa.me/${phonenumber}?text=${encodeURIComponent(
               `I would love to make enquiry about the ${product?.name}. 
               https://proclassics.co/product/${product?.slug}`
             )}`}
-            className={`mt-6 lg:mt-12 w-full flex items-center justify-center ${inter.className} bg-[#2B9D84] rounded-full text-white font-semibold py-4 text-[15px]`}
+            className={`my-6 lg:my-8 w-full flex items-center justify-center ${inter.className} bg-[#2B9D84] rounded-full text-white font-semibold py-4 text-[15px]`}
           >
             TALK NOW ON WHATSAPP
           </Link>
+          <div
+            className={`mt-3 ${nunito.className}text-[#433740] whitespace-pre-line text-sm lg:text-base`}
+          >
+            {product?.description}
+          </div>
+          <Other_Information product={product} />
         </div>
       </section>
 
-      <section className="mt-10 lg:mt-20 w-full px-4 lg:px-[60px] lg:max-w-[1400px]">
+      <section className="mt-16 lg:mt-20 w-full px-4 lg:px-[60px] lg:max-w-[1400px]">
         <div className={`${raleway.className} font-bold text-[12px]`}>
           JEWELRY TESTING
         </div>

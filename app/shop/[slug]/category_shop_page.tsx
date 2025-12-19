@@ -188,7 +188,7 @@ export default function CategoryShopPage({ category }: { category: any }) {
           </section>
           <section>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-[16px] lg:gap-[24px] mt-6 lg:mt-8">
-              {products?.slice(8, 12).map((product) => (
+              {products?.slice(8).map((product) => (
                 <Product_Card product={product} key={product?.slug} />
               ))}
             </div>
