@@ -202,7 +202,7 @@ export default function Home() {
               className="w-full h-full object-cover"
               fill
               alt="collection pic"
-              src={"/collection1.jpg"}
+              src={"/collection1.JPG"}
             />
           </div>
           <div className="w-full h-full relative rounded-lg overflow-hidden">
@@ -218,7 +218,7 @@ export default function Home() {
               className="w-full h-full object-cover"
               fill
               alt="collection pic"
-              src={"/collection3.png"}
+              src={"/collection3.PNG"}
             />
           </div>
           <div className="w-full h-full relative rounded-lg overflow-hidden">
