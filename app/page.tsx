@@ -196,35 +196,39 @@ export default function Home() {
         >
           OUR ICONIC CUSTOM COLLECTION
         </h2>
-        <div className="collections grid grid-cols-2 lg:grid-cols-4 items-center justify-start gap-3 mt-10">
-          <Image
-            className="rounded"
-            width={999}
-            height={999}
-            alt="collection pic"
-            src={"/collection1.png"}
-          />
-          <Image
-            className="rounded"
-            width={999}
-            height={999}
-            alt="collection pic"
-            src={"/collection2.png"}
-          />
-          <Image
-            className="rounded"
-            width={999}
-            height={999}
-            alt="collection pic"
-            src={"/collection3.png"}
-          />
-          <Image
-            className="rounded"
-            width={999}
-            height={999}
-            alt="collection pic"
-            src={"/collection3.png"}
-          />
+        <div className="collections grid grid-cols-2 lg:grid-cols-4 gap-3 mt-10 h-100 w-full">
+          <div className="w-full h-full relative rounded-lg overflow-hidden">
+            <Image
+              className="w-full h-full object-cover"
+              fill
+              alt="collection pic"
+              src={"/collection1.jpg"}
+            />
+          </div>
+          <div className="w-full h-full relative rounded-lg overflow-hidden">
+            <Image
+              className="w-full h-full object-cover"
+              fill
+              alt="collection pic"
+              src={"/collection2.jpg"}
+            />
+          </div>
+          <div className="w-full h-full relative rounded-lg overflow-hidden">
+            <Image
+              className="w-full h-full object-cover"
+              fill
+              alt="collection pic"
+              src={"/collection3.png"}
+            />
+          </div>
+          <div className="w-full h-full relative rounded-lg overflow-hidden">
+            <Image
+              className="w-full h-full object-cover"
+              fill
+              alt="collection pic"
+              src={"/custom2.jpg"}
+            />
+          </div>
         </div>
         <Link
           href={"/shop"}
@@ -369,22 +373,22 @@ export default function Home() {
         >
           TIMELESS PIECES
         </h2>
-        <div className="scroll-container overflow-x-auto w-full mt-10 px-4 mx-auto">
-          <div className="flex flex-col lg:flex-row justify-center items-center gap-2 w-full mx-auto lg:h-[600px]">
+        <div className="w-full mt-10 px-4 mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 justify-center items-center gap-2 w-full mx-auto lg:h-[400px]">
             <div className="vid-container rounded-lg overflow-hidden w-full h-full">
               <Image
                 className="w-full h-full object-cover"
-                width={76}
-                height={191}
+                width={999}
+                height={999}
                 alt="timeless"
-                src={"/t1.jpg"}
+                src={"/t5.jpg"}
               />
             </div>
             <div className="vid-container rounded-lg overflow-hidden w-full h-full">
               <Image
                 className="w-full h-full object-cover"
-                width={120}
-                height={191}
+                width={999}
+                height={999}
                 alt="timeless"
                 src={"/t2.jpg"}
               />
@@ -392,10 +396,19 @@ export default function Home() {
             <div className="vid-container rounded-lg overflow-hidden w-full h-full">
               <Image
                 className="w-full h-full object-cover"
-                width={76}
-                height={191}
+                width={999}
+                height={999}
                 alt="timeless"
                 src={"/t3.jpg"}
+              />
+            </div>
+            <div className="vid-container rounded-lg overflow-hidden w-full h-full">
+              <Image
+                className="w-full h-full object-cover"
+                width={999}
+                height={999}
+                alt="timeless"
+                src={"/t4.jpg"}
               />
             </div>
           </div>
